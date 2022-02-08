@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="12dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/hint_text"
+        android:background="@drawable/alan_hint_bg_left"
+        tools:text="ASDASDASDASDAS\nrdrdfgdgfgfg"
+        android:textColor="@color/hint_recognized_text"
+        android:textStyle="italic"
+        android:padding="12dp"
+        android:textSize="15sp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

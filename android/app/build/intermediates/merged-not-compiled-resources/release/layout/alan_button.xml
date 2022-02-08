@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <WebView
+        android:id="@+id/webview"
+        android:background="@color/hint_final_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_container"
+        app:layout_constraintTop_toTopOf="@id/button_container"
+        app:layout_constraintBottom_toBottomOf="@id/button_container"
+        android:id="@+id/hint_panel_left"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="@dimen/alan_button_size"
+        android:padding="12dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/alan_hint_bg_left"
+            android:padding="12dp"
+            android:text="@string/alanHintText"
+            android:textSize="15sp"
+            android:visibility="visible"
+            tools:alpha="1"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hint_panel_left"
+        app:layout_constraintEnd_toStartOf="@id/hint_panel_right"
+        android:id="@+id/button_container"
+        android:layout_width="@dimen/alan_button_size"
+        android:layout_height="@dimen/alan_button_size">
+
+        <ImageView
+            android:id="@+id/shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/alanShadow"
+            android:visibility="gone"
+            tools:background="@drawable/button_default_shadow" />
+
+        <com.alan.alansdk.button.GradientButton
+            android:id="@+id/button_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/button_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/button_loader"
+            app:srcCompat="@drawable/button_loader" />
+
+        <ImageView
+            android:id="@+id/inner_bg_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="1.0"
+            android:contentDescription="@string/alanTriangle"
+            android:src="@drawable/ic_button_inner_triangle" />
+
+        <ImageView
+            android:id="@+id/inner_bg_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:alpha="0.0"
+            android:contentDescription="@string/alanCircle"
+            android:src="@drawable/ic_button_inner_shape" />
+
+        <FrameLayout
+            android:id="@+id/logo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="12dp">
+
+            <ImageView
+                android:id="@+id/logo_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:alpha="1"
+                android:contentDescription="@string/alanLogo1"
+                android:src="@drawable/button_logo_state_01" />
+
+            <ImageView
+                android:id="@+id/logo_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:contentDescription="@string/alanLogo2"
+                android:src="@drawable/button_logo_state_02" />
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        app:layout_constraintStart_toEndOf="@id/button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_container"
+        app:layout_constraintBottom_toBottomOf="@id/button_container"
+        android:id="@+id/hint_panel_right"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_marginStart="@dimen/alan_button_size"
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/hint_text_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:background="@drawable/alan_hint_bg_right"
+            android:padding="12dp"
+            android:text="@string/alanHintText"
+            android:textColor="@color/hint_recognized_text"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+
+
+</FrameLayout>
