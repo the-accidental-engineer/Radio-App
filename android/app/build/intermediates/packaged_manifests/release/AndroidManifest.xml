@@ -68,14 +68,25 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <activity
+            android:name="com.alan.alansdk.CheckPermissionsActivity"
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name="com.alan.alansdk.qr.QRScanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/QRActivityTheme" />
 
         <service
-            android:name="com.alan.alansdk.AlanService"
-            android:enabled="true" />
+            android:name="com.alan.alansdk.AlanNotificationService"
+            android:enabled="true"
+            android:stopWithTask="false" />
     </application>
 
 </manifest>

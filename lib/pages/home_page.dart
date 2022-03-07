@@ -77,9 +77,12 @@ class _HomePageState extends State<HomePage> {
 
   setUpAlan() {
     AlanVoice.addButton(
-        "55a4c6a2ab1567aa570048de256bfb452e956eca572e1d8b807a3e2338fdd0dc/stage",
+        "55a4c6a2ab1567aa570048de256bfb452e956eca572e1d8b807a3e2338fdd0dc/prod",
         buttonAlign: AlanVoice.BUTTON_ALIGN_RIGHT);
-    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+    AlanVoice.onCommand.add((command) {
+      debugPrint("got new command ${command.toString()}");
+      _handleCommand(command.data);
+    });
   }
 
   _handleCommand(Map<String, dynamic> response) {
