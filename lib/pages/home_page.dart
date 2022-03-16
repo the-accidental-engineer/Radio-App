@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
 
   setUpAlan() {
     AlanVoice.addButton(
-        "55a4c6a2ab1567aa570048de256bfb452e956eca572e1d8b807a3e2338fdd0dc/prod",
+        "key/prod",
         buttonAlign: AlanVoice.BUTTON_ALIGN_RIGHT);
     AlanVoice.onCommand.add((command) {
       debugPrint("got new command ${command.toString()}");
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
         break;
 
       default:
-        print("Command was ${response["command"]}");
+        debugPrint("Command was ${response["command"]}");
     }
   }
 
